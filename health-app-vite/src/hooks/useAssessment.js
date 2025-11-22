@@ -1,8 +1,7 @@
-// src/hooks/useAssessment.js
 import { useState, useContext, useCallback } from "react";
 import { FirebaseContext } from "../context/FirebaseContext";
 import { UIContext } from "../context/UIContext";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 import { sendChatToModel } from "../api/chatbotAPI";
 
 export const useAssessment = () => {
@@ -30,7 +29,7 @@ export const useAssessment = () => {
         await addDoc(collection(db, "users", userId, "assessments"), {
           input: userInput,
           response: responseText,
-          createdAt: serverTimestamp(),
+          createdAt: new Date().toISOString(),
         });
       } catch (e) {
         console.error(e);
@@ -39,7 +38,7 @@ export const useAssessment = () => {
         setLoading(false);
       }
     },
-    [db, userId]
+    [db, userId, setError, setLoading]
   );
 
   return { assessment, runAssessment };

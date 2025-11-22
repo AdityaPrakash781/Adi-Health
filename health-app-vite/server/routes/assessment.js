@@ -1,4 +1,3 @@
-// server/routes/assessment.js
 import express from "express";
 import { callGemini } from "../controllers/geminiController.js";
 
@@ -27,13 +26,13 @@ Provide a medical-safe analysis.
 
     const reply = await callGemini({
       system,
-      messages: [{ role: "user", text: prompt }]
+      messages: [{ role: "user", text: prompt }],
     });
 
     res.json({ reply });
   } catch (error) {
     console.error("Assessment API Error:", error);
-    res.status(500).json({ error: "Assessment request failed." });
+    res.status(500).json({ error: error.message || "Assessment request failed." });
   }
 });
 

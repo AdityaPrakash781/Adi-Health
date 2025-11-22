@@ -1,4 +1,3 @@
-// src/context/UIContext.jsx
 import { createContext, useState } from "react";
 
 export const UIContext = createContext();
@@ -6,8 +5,6 @@ export const UIContext = createContext();
 export function UIProvider({ children }) {
   const [error, setError] = useState(null);
   const [tab, setTab] = useState("reminders");
-
-  // Unified UI loading system
   const [loading, setLoading] = useState(false);
 
   return (

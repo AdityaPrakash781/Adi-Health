@@ -1,4 +1,3 @@
-// api/assessmentAPI.js
 import { fetchWithBackoff } from "../utils/fetchWithBackoff";
 
 export const submitAssessment = async (assessmentData) => {
@@ -9,7 +8,7 @@ export const submitAssessment = async (assessmentData) => {
   });
 
   const data = await res.json();
-  return data; // includes score, category, recommendations, etc.
+  return data;
 };
 
 export const getAssessmentHistory = async () => {

@@ -1,8 +1,5 @@
-// src/router/AppRouter.jsx
 import { useContext } from "react";
 import { UIContext } from "../context/UIContext";
-
-// Pages
 import RemindersPage from "../pages/RemindersPage";
 import ActivityPage from "../pages/ActivityPage";
 import ChatbotPage from "../pages/ChatbotPage";
@@ -25,6 +22,6 @@ export default function AppRouter() {
       return <MedicationsPage />;
 
     default:
-      return null;
+      return <RemindersPage />;
   }
 }

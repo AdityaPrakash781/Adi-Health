@@ -8,7 +8,7 @@ export default function ChatWindow({ history = [], loading }) {
       ))}
 
       {loading && (
-        <div className="italic text-sm opacity-70">Thinking...</div>
+        <div className="italic text-sm opacity-70 text-gray-500">Thinking...</div>
       )}
     </div>
   );

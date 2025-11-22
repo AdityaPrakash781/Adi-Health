@@ -1,4 +1,3 @@
-// src/components/activity/HeartRateCard.jsx
 export default function HeartRateCard({ bpm = 82 }) {
   return (
     <div className="p-5 bg-pink-50 rounded-xl">

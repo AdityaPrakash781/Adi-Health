@@ -1,7 +1,9 @@
 export function requestNotificationPermission() {
   if (!("Notification" in window)) return false;
 
-  Notification.requestPermission();
+  if (Notification.permission === "default") {
+    Notification.requestPermission();
+  }
   return true;
 }
 

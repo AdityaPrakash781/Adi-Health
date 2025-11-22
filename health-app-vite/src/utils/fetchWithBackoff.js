@@ -1,4 +1,3 @@
-// utils/fetchWithBackoff.js
 export const fetchWithBackoff = async (url, options, retries = 3) => {
   for (let i = 0; i < retries; i++) {
     try {
@@ -7,7 +6,7 @@ export const fetchWithBackoff = async (url, options, retries = 3) => {
       return res;
     } catch (err) {
       if (i === retries - 1) throw err;
-      await new Promise(r => setTimeout(r, 500 * (i + 1)));
+      await new Promise((r) => setTimeout(r, 500 * (i + 1)));
     }
   }
 };

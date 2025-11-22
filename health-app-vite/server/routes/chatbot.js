@@ -1,4 +1,3 @@
-// server/routes/chatbot.js
 import express from "express";
 import { callGemini } from "../controllers/geminiController.js";
 
@@ -20,7 +19,7 @@ Always use simple, helpful language.
     res.json({ reply });
   } catch (error) {
     console.error("Chatbot API Error:", error);
-    res.status(500).json({ error: "Chatbot request failed." });
+    res.status(500).json({ error: error.message || "Chatbot request failed." });
   }
 });
 

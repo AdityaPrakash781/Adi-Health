@@ -41,7 +41,7 @@ export default function AddMedicationForm({ onAdd }) {
       <div className="space-y-1">
         <label className="text-sm text-gray-600">Name</label>
         <input
-          className="w-full p-3 rounded-lg border border-border"
+          className="w-full p-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary"
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Paracetamol"
@@ -51,7 +51,7 @@ export default function AddMedicationForm({ onAdd }) {
       <div className="space-y-1">
         <label className="text-sm text-gray-600">Dosage</label>
         <input
-          className="w-full p-3 rounded-lg border border-border"
+          className="w-full p-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary"
           value={dosage}
           onChange={(e) => setDosage(e.target.value)}
           placeholder="500 mg"
@@ -62,7 +62,7 @@ export default function AddMedicationForm({ onAdd }) {
         <label className="text-sm text-gray-600">Time</label>
         <input
           type="time"
-          className="w-full p-3 rounded-lg border border-border"
+          className="w-full p-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary"
           value={time}
           onChange={(e) => setTime(e.target.value)}
         />
@@ -71,7 +71,7 @@ export default function AddMedicationForm({ onAdd }) {
       <div className="space-y-1">
         <label className="text-sm text-gray-600">Frequency</label>
         <select
-          className="w-full p-3 rounded-lg border border-border"
+          className="w-full p-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary"
           value={frequency}
           onChange={(e) => setFrequency(e.target.value)}
         >
@@ -81,7 +81,10 @@ export default function AddMedicationForm({ onAdd }) {
         </select>
       </div>
 
-      <button className="w-full bg-primary text-white py-3 rounded-lg">
+      <button
+        type="submit"
+        className="w-full bg-primary text-white py-3 rounded-lg hover:bg-blue-700 transition-colors"
+      >
         Add Medication
       </button>
     </form>

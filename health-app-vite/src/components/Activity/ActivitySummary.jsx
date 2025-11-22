@@ -1,9 +1,7 @@
-// src/components/activity/ActivitySummary.jsx
-
 export default function ActivitySummary() {
   return (
     <div className="bg-white shadow rounded-xl p-5">
-      <h2 className="text-lg font-semibold">Today’s Summary</h2>
+      <h2 className="text-lg font-semibold">Today's Summary</h2>
       <p className="text-sm text-gray-500">Your daily health metrics</p>
 
       <div className="grid grid-cols-2 gap-4 mt-4">

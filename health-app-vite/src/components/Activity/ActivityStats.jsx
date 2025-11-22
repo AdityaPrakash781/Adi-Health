@@ -1,5 +1,3 @@
-// src/components/activity/ActivityStats.jsx
-
 export default function ActivityStats() {
   return (
     <div className="bg-white shadow rounded-xl p-5 mt-4">
