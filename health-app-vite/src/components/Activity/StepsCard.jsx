@@ -1,4 +1,3 @@
-// src/components/activity/StepsCard.jsx
 export default function StepsCard({ steps = 8432 }) {
   return (
     <div className="p-5 bg-indigo-50 rounded-xl">

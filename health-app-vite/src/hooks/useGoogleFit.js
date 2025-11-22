@@ -1,9 +1,6 @@
-// src/hooks/useGoogleFit.js
 import { useState, useCallback, useContext } from "react";
 import { UIContext } from "../context/UIContext";
-import {
-  syncGoogleFitData,
-} from "../api/googleFitAPI";
+import { syncGoogleFitData } from "../api/googleFitAPI";
 
 export const useGoogleFit = () => {
   const { setError, setLoading } = useContext(UIContext);
@@ -35,7 +32,7 @@ export const useGoogleFit = () => {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [setError, setLoading]);
 
   return { fitnessData, syncGoogleFit };
 };

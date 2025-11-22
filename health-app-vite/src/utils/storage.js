@@ -1,4 +1,3 @@
-// src/utils/storage.js
 export const storage = {
   get(key, fallback = null) {
     try {
@@ -10,10 +9,18 @@ export const storage = {
   },
 
   set(key, value) {
-    localStorage.setItem(key, JSON.stringify(value));
+    try {
+      localStorage.setItem(key, JSON.stringify(value));
+    } catch (err) {
+      console.error("Storage error:", err);
+    }
   },
 
   remove(key) {
-    localStorage.removeItem(key);
+    try {
+      localStorage.removeItem(key);
+    } catch (err) {
+      console.error("Storage error:", err);
+    }
   },
 };

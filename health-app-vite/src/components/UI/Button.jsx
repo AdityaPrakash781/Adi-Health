@@ -1,4 +1,3 @@
-// src/components/UI/Button.jsx
 import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
@@ -8,10 +7,8 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-primary text-white shadow hover:bg-primary/90",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        outline:
-          "border border-border text-foreground hover:bg-gray-50 bg-white",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        outline: "border border-border text-foreground hover:bg-gray-50 bg-white",
         ghost: "hover:bg-gray-100",
       },
       size: {
@@ -37,4 +34,3 @@ export function Button({ className, variant, size, ...props }) {
 }
 
 export { buttonVariants };
-

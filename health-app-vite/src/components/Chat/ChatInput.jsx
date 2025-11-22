@@ -18,12 +18,14 @@ export default function ChatInput({ onSend, disabled }) {
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder="Ask something..."
+        disabled={disabled}
       />
 
       <button
+        type="submit"
         disabled={disabled || !value.trim()}
         className={`px-6 py-3 rounded-xl text-white bg-primary transition-opacity ${
-          disabled ? "opacity-50 cursor-not-allowed" : ""
+          disabled ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-700"
         }`}
       >
         Send

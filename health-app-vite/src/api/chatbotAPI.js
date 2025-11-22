@@ -1,4 +1,3 @@
-// api/chatbotAPI.js
 import { fetchWithBackoff } from "../utils/fetchWithBackoff";
 
 export const sendChatToModel = async (messages) => {

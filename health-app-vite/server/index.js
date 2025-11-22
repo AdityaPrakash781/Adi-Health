@@ -1,4 +1,3 @@
-// server/index.js
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -14,7 +13,7 @@ app.use(cors());
 
 app.use("/api/chatbot", chatbotRoute);
 app.use("/api/assessment", assessmentRoute);
+app.use("/api/fit", fitRoute);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Backend server running on port ${PORT}`));
-app.use("/api/fit", fitRoute);

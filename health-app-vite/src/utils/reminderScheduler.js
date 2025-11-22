@@ -19,6 +19,7 @@ export function scheduleLocalReminder(med) {
     setTimeout(() => {
       new Notification("Medication Reminder", {
         body: `${med.name} — ${med.dosage}`,
+        icon: "/vite.svg",
       });
     }, timeout);
   });

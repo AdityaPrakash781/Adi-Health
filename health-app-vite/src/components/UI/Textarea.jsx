@@ -1,4 +1,3 @@
-// src/components/UI/Textarea.jsx
 import { forwardRef } from "react";
 import { cn } from "@/lib/utils";
 

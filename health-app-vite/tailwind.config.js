@@ -4,13 +4,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#2563eb",     // blue-600
-        lightBg: "#f1f5f9",     // slate-100
-        darkText: "#0f172a",    // slate-900
-        border: "#e2e8f0",      // slate-200
+        primary: "#2563eb",
+        secondary: "#6366F1",
+        lightBg: "#f1f5f9",
+        neutralBg: "#f9fafb",
+        darkText: "#0f172a",
+        foreground: "#0f172a",
+        border: "#e2e8f0",
+        input: "#e2e8f0",
+        card: "#ffffff",
+        "muted-foreground": "#64748b",
+        "secondary-foreground": "#f1f5f9",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
-

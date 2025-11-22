@@ -1,4 +1,3 @@
-// src/components/UI/Section.jsx
 export default function Section({ title, children }) {
   return (
     <section className="bg-white border border-border shadow-sm rounded-xl p-6 space-y-4">

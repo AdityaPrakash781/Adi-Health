@@ -1,4 +1,3 @@
-// api/googleFitAPI.js
 import { fetchWithBackoff } from "../utils/fetchWithBackoff";
 
 export const getGoogleFitSteps = async () => {

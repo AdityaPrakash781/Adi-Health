@@ -1,4 +1,3 @@
-// src/context/ChatContext.jsx
 import { createContext, useContext, useState } from "react";
 import { UIContext } from "./UIContext";
 import { FirebaseContext } from "./FirebaseContext";
@@ -13,7 +12,7 @@ export function ChatProvider({ children }) {
     {
       id: "welcome",
       role: "assistant",
-      text: "Hello! I’m your AI health assistant. How can I help you today?",
+      text: "Hello! I'm your AI health assistant. How can I help you today?",
     },
   ]);
 
@@ -32,21 +31,16 @@ export function ChatProvider({ children }) {
     setLoading(true);
 
     try {
-      const res = await fetch("/api/chat", {
+      const res = await fetch("/api/chatbot", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          userId,
-          message: text,
-          history: messages.map((m) => ({
-            role: m.role,
-            content: m.text,
-          })),
+          messages: messages.map((m) => ({ role: m.role, text: m.text })),
         }),
       });
 
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error);
+      if (!res.ok) throw new Error(data.error || "Request failed");
 
       const aiMsg = {
         id: Date.now() + 1,
@@ -68,7 +62,7 @@ export function ChatProvider({ children }) {
       {
         id: "welcome",
         role: "assistant",
-        text: "Hello! I’m your AI health assistant. How can I help you today?",
+        text: "Hello! I'm your AI health assistant. How can I help you today?",
       },
     ]);
   };
